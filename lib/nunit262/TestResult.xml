@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Program Files\NUnit 2.6.2\bin\tests\nunit.util.tests.dll" total="327" errors="0" failures="0" not-run="0" inconclusive="9" ignored="0" skipped="0" invalid="0" date="2013-05-15" time="20:42:22">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.1433" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="c:\Code\ruby\pre_push\lib\nunit262" machine-name="T-NETBOOK" user="Nieve" user-domain="T-NETBOOK" />
+  <culture-info current-culture="en-GB" current-uiculture="fr-FR" />
+  <test-suite type="Assembly" name="C:\Program Files\NUnit 2.6.2\bin\tests\nunit.util.tests.dll" executed="True" result="Success" success="True" time="151.016" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="NUnit" executed="True" result="Success" success="True" time="150.969" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Util" executed="True" result="Success" success="True" time="150.969" asserts="0">
+            <results>
+              <test-suite type="SetUpFixture" name="Tests" executed="True" result="Success" success="True" time="149.609" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="AssemblyListTests" executed="True" result="Success" success="True" time="0.297" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.AddFiresChangedEvent" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.CanAddAssemblies" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.CanRemoveAssemblies" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.EmptyList" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.MustAddAbsolutePath" executed="True" result="Success" success="True" time="0.078" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.RemoveAtFiresChangedEvent" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.RemoveFiresChangedEvent" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.AssemblyListTests.SettingFullPathFiresChangedEvent" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="AssemblyWatcherTests" executed="True" result="Success" success="True" time="1.047" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.AssemblyWatcherTests.ChangingAttributesDoesNotTriggerWatcher" executed="True" result="Success" success="True" time="0.250" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.AssemblyWatcherTests.ChangingFileTriggersWatcher" executed="True" result="Success" success="True" time="0.219" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.AssemblyWatcherTests.CopyingFileDoesNotTriggerWatcher" executed="True" result="Success" success="True" time="0.313" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.AssemblyWatcherTests.MultipleCloselySpacedChangesTriggerWatcherOnlyOnce" executed="True" result="Success" success="True" time="0.266" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="CategoryManagerTest" executed="True" result="Success" success="True" time="0.438" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.CategoryManagerTest.CanAddAllAvailableCategoriesInTestTree" executed="True" result="Success" success="True" time="0.188" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryManagerTest.CanAddStrings" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryManagerTest.CanAddStringsWithoutDuplicating" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryManagerTest.CanAddTestCategories" executed="True" result="Success" success="True" time="0.109" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryManagerTest.CanClearEntries" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="CategoryParseTests" executed="True" result="Success" success="True" time="0.063" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.CanParseCompoundCategory" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.CanParseExcludedCategories" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.CanParseMultipleAlternatives" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.CanParseMultipleCategoriesWithAnd" executed="True" result="Success" success="True" time="0.016" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.CanParseSimpleCategory" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.EmptyStringReturnsEmptyFilter" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.OrAndMinusCombined" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.PlusAndMinusCombined" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.PrecedenceTest" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.CategoryParseTests.PrecedenceTestWithParentheses" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="DomainManagerTests" executed="True" result="Success" success="True" time="0.234" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.DomainManagerTests.GetCommonAppBase_OneElement" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.DomainManagerTests.GetCommonAppBase_ThreeElements_DiferentDirectories" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.DomainManagerTests.GetCommonAppBase_TwoElements_DifferentDirectories" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.DomainManagerTests.GetCommonAppBase_TwoElements_SameDirectory" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.DomainManagerTests.GetPrivateBinPath" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.DomainManagerTests.UnloadUnloadedDomain" executed="True" result="Success" success="True" time="0.203" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="EventDispatcherTests" executed="True" result="Success" success="True" time="0.141" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.ProjectLoaded" executed="True" result="Success" success="True" time="0.063" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.ProjectLoadFailed" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.ProjectLoading" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.ProjectUnloaded" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.ProjectUnloadFailed" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.ProjectUnloading" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.RunFailed" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.RunFinished" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.RunStarting" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.SuiteFinished" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.SuiteStarting" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestFinished" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestLoaded" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestLoadFailed" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestLoading" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestReloaded" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestReloadFailed" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestReloading" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestStarting" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestUnloaded" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestUnloadFailed" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.EventDispatcherTests.TestUnloading" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="FileWatcherTests" executed="True" result="Success" success="True" time="0.969" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.FileWatcherTests.ChangingAttributesDoesNotTriggerWatcher" executed="True" result="Success" success="True" time="0.219" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.FileWatcherTests.ChangingFileTriggersWatcher" executed="True" result="Success" success="True" time="0.219" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.FileWatcherTests.CopyingFileDoesNotTriggerWatcher" executed="True" result="Success" success="True" time="0.203" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.FileWatcherTests.MultipleCloselySpacedChangesTriggerWatcherOnlyOnce" executed="True" result="Success" success="True" time="0.281" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="MemorySettingsStorageTests" executed="True" result="Success" success="True" time="0.078" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.MemorySettingsStorageTests.MakeStorage" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.MemorySettingsStorageTests.MakeSubStorages" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.MemorySettingsStorageTests.RemoveSettings" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.MemorySettingsStorageTests.SaveAndLoadSettings" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.MemorySettingsStorageTests.SubstorageSettings" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.MemorySettingsStorageTests.TypeSafeSettings" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="NUnitProjectLoad" executed="True" result="Success" success="True" time="0.156" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.NUnitProjectLoad.FromAssembly" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectLoad.LoadEmptyConfigs" executed="True" result="Success" success="True" time="0.063" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectLoad.LoadEmptyProject" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectLoad.LoadNormalProject" executed="True" result="Success" success="True" time="0.016" asserts="7" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectLoad.LoadProjectWithManualBinPath" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectLoad.SaveClearsAssemblyWrapper" executed="True" result="Success" success="True" time="0.063" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="NUnitProjectSave" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.NUnitProjectSave.SaveEmptyConfigs" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectSave.SaveEmptyProject" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectSave.SaveNormalProject" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="NUnitProjectTests" executed="True" result="Success" success="True" time="0.156" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.AddConfigMakesProjectDirty" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.CanAddAssemblies" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.CanAddConfigs" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.CanSetActiveConfig" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.CanSetAppBase" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.ConfigurationFileFromAssemblies" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.ConfigurationFileFromAssembly" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.DefaultActiveConfig" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.DefaultApplicationBase" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.DefaultConfigurationFile" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.DefaultProjectName" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.IsProjectFile" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.LoadMakesProjectNotDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.NewProjectDefaultPath" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.NewProjectIsEmpty" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.NewProjectIsNotDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.NewProjectNotLoadable" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.RemoveActiveConfig" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.RemoveConfigMakesProjectDirty" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.RenameActiveConfig" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.RenameConfigMakesProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.SaveAndLoadConfigsWithAssemblies" executed="True" result="Success" success="True" time="0.016" asserts="8" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.SaveAndLoadEmptyConfigs" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.SaveAndLoadEmptyProject" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.SaveMakesProjectNotDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.SaveSetsProjectPath" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitProjectTests.SettingActiveConfigMakesProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="NUnitRegistryTests" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.NUnitRegistryTests.CurrentUser" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitRegistryTests.CurrentUserTestMode" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.NUnitRegistryTests.TestClearRoutines" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="PathUtilTests" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.PathUtilTests.CheckDefaults" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="PathUtilTests_Unix" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Unix.Canonicalize" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Unix.IsAssemblyFileType" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Unix.PathFromUri" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Unix.RelativePath" executed="True" result="Success" success="True" time="0.016" asserts="10" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Unix.SamePath" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Unix.SamePathOrUnder" executed="True" result="Success" success="True" time="0.000" asserts="7" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="PathUtilTests_Windows" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Windows.Canonicalize" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Windows.IsAssemblyFileType" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Windows.PathFromUri" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Windows.RelativePath" executed="True" result="Success" success="True" time="0.000" asserts="12" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Windows.SamePath" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.PathUtilTests_Windows.SamePathOrUnder" executed="True" result="Success" success="True" time="0.000" asserts="9" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ProcessRunnerTests" executed="True" result="Success" success="True" time="52.484" asserts="1">
+                    <properties>
+                      <property name="Timeout" value="30000" />
+                    </properties>
+                    <results>
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.CheckRunnerID" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.CountTestCases" executed="True" result="Success" success="True" time="5.375" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.CountTestCasesAcrossMultipleAssemblies" executed="True" result="Success" success="True" time="3.203" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadAndReloadAssembly" executed="True" result="Success" success="True" time="5.969" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadAssemblyWithFixture" executed="True" result="Success" success="True" time="2.953" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadAssemblyWithoutNamespaces" executed="True" result="Success" success="True" time="2.891" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadAssemblyWithSuite" executed="True" result="Success" success="True" time="2.719" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadMultipleAssemblies" executed="True" result="Success" success="True" time="3.031" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadMultipleAssembliesWithFixture" executed="True" result="Success" success="True" time="3.063" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.LoadMultipleAssembliesWithSuite" executed="True" result="Success" success="True" time="2.875" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.RunAssembly" executed="True" result="Success" success="True" time="3.641" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.RunAssemblyUsingBeginAndEndRun" executed="True" result="Success" success="True" time="3.375" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.RunMultipleAssemblies" executed="True" result="Success" success="True" time="3.469" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.BasicRunnerTests.RunMultipleAssembliesUsingBeginAndEndRun" executed="True" result="Success" success="True" time="3.375" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.ProcessRunnerTests.TestProcessIsReused" executed="True" result="Success" success="True" time="6.156" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ProjectConfigTests" executed="True" result="Success" success="True" time="0.188" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AbsoluteBasePath" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AbsoluteConfigurationFile" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddingConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddingInitialConfigRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddingSubsequentConfigDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddToActiveConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddToActiveConfigRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddToInactiveConfigDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.AddToInactiveConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.CanAddAssemblies" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.DefaultConfigurationFile" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.EmptyConfig" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.ManualPrivateBinPath" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.NoBasePathSet" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.NoPrivateBinPath" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RelativeBasePath" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RelativeConfigurationFile" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RemoveActiveConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RemoveActiveConfigRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RemoveInactiveConfigDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RemoveInactiveConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RenameActiveConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RenameActiveConfigRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RenameInactiveConfigDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.RenameInctiveConfigMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigApplicationBaseMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigApplicationBaseRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigBinPathTypeMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigBinPathTypeRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigConfigurationFileMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigConfigurationFileRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigPrivateBinPathMarksProjectDirty" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingActiveConfigPrivateBinPathRequiresReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigApplicationBaseDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigApplicationBaseMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigBinPathTypeDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigBinPathTypeMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigConfigurationFileDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigConfigurationFileMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigPrivateBinPathDoesNotRequireReload" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.SettingInactiveConfigPrivateBinPathMarksProjectDirty" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.ProjectConfigTests.ToArray" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="RecentFileEntryTests" executed="True" result="Success" success="True" time="0.078" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.CanCreateFromFileNameAndVersion" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.CanCreateFromSimpleFileName" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.CanParseFileNamePlusVersionString" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.CanParseFileNameWithCommaPlusVersionString" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.CanParseSimpleFileName" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.CanParseSimpleFileNameWithComma" executed="True" result="Success" success="True" time="0.031" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.RecentFileEntryTests.EntryCanDisplayItself" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="RecentFilesTests" executed="True" result="Success" success="True" time="0.094" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.AddMaxItems" executed="True" result="Success" success="True" time="0.000" asserts="7" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.AddSingleItem" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.AddTooManyItems" executed="True" result="Success" success="True" time="0.000" asserts="7" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.CountAtMax" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.CountAtMin" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.CountDefault" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.CountOverMax" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.CountUnderMin" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.EmptyList" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.IncreaseSize" executed="True" result="Success" success="True" time="0.016" asserts="12" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.IncreaseSizeAfterAdd" executed="True" result="Success" success="True" time="0.000" asserts="8" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReduceSize" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReduceSizeAfterAdd" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.RemoveFirstProject" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.RemoveLastProject" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.RemoveMultipleProjects" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.RemoveOneProject" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReorderLastProject" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReorderMultipleProjects" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReorderSameProject" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReorderSingleProject" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.RecentFilesTests.ReorderWithListNotFull" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="RegistrySettingsStorageTests" executed="True" result="Success" success="True" time="0.047" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.RegistrySettingsStorageTests.MakeSubStorages" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.RegistrySettingsStorageTests.RemoveSettings" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.RegistrySettingsStorageTests.SaveAndLoadSettings" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.RegistrySettingsStorageTests.StorageHasCorrectKey" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.RegistrySettingsStorageTests.SubstorageSettings" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.RegistrySettingsStorageTests.TypeSafeSettings" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="RemoteTestAgentTests" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.RemoteTestAgentTests.AgentReturnsProcessId" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="RemoteTestResultTest" executed="True" result="Success" success="True" time="2.516" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.RemoteTestResultTest.ResultStillValidAfterDomainUnload" executed="True" result="Success" success="True" time="2.516" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="RuntimeFrameworkSelectorTests" executed="True" result="Success" success="True" time="0.094" asserts="0">
+                    <results>
+                      <test-suite type="Theory" name="RequestForSpecificFrameworkIsHonored" executed="True" result="Success" success="True" time="0.047" asserts="0">
+                        <results>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(net-1.0)" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(net-1.1)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(net-2.0)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(net-4.0)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(mono-1.0)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(mono-2.0)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(v1.1)" executed="True" result="Inconclusive" success="False" time="0.016" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: not Any
+  But was:  Any
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(v2.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: not Any
+  But was:  Any
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificFrameworkIsHonored(v4.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: not Any
+  But was:  Any
+]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="Theory" name="RequestForSpecificVersionIsHonored" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(net-1.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: Any
+  But was:  Net
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(net-1.1)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: Any
+  But was:  Net
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(net-2.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: Any
+  But was:  Net
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(net-4.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: Any
+  But was:  Net
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(mono-1.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: Any
+  But was:  Mono
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(mono-2.0)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                            <reason>
+                              <message><![CDATA[  Expected: Any
+  But was:  Mono
+]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(v1.1)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(v2.0)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="NUnit.Util.Tests.RuntimeFrameworkSelectorTests.RequestForSpecificVersionIsHonored(v4.0)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ServerUtilityTests" executed="True" result="Success" success="True" time="0.156" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.ServerUtilityTests.CanGetTcpChannelOnSpecifiedPort" executed="True" result="Success" success="True" time="0.078" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.ServerUtilityTests.CanGetTcpChannelOnUnpecifiedPort" executed="True" result="Success" success="True" time="0.016" asserts="4" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="SettingsGroupTests" executed="True" result="Success" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.SettingsGroupTests.BadSetting" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.SettingsGroupTests.DefaultSettings" executed="True" result="Success" success="True" time="0.000" asserts="7" />
+                      <test-case name="NUnit.Util.Tests.SettingsGroupTests.SubGroupSettings" executed="True" result="Success" success="True" time="0.000" asserts="7" />
+                      <test-case name="NUnit.Util.Tests.SettingsGroupTests.TopLevelSettings" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.SettingsGroupTests.TypeSafeSettings" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="SummaryResultFixture" executed="True" result="Success" success="True" time="0.047" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.SummaryResultFixture.SummaryMatchesResult" executed="True" result="Success" success="True" time="0.047" asserts="9" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestAgencyTests" executed="True" result="Success" success="True" time="1.063" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestAgencyTests.CanConnectToAgency" executed="True" result="Success" success="True" time="0.031" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestAgencyTests.CanLaunchAndConnectToAgent" executed="True" result="Success" success="True" time="1.031" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestDomainFixture" executed="True" result="Success" success="True" time="2.500" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestDomainFixture.AppDomainIsSetUpCorrectly" executed="True" result="Success" success="True" time="0.016" asserts="8" />
+                      <test-case name="NUnit.Util.Tests.TestDomainFixture.AssemblyIsLoadedCorrectly" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestDomainFixture.CanRunMockAssemblyTests" executed="True" result="Success" success="True" time="0.469" asserts="5" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestDomainRunnerTests" executed="True" result="Success" success="True" time="29.859" asserts="1">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.CheckRunnerID" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.CountTestCases" executed="True" result="Success" success="True" time="2.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.CountTestCasesAcrossMultipleAssemblies" executed="True" result="Success" success="True" time="2.156" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadAndReloadAssembly" executed="True" result="Success" success="True" time="4.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadAssemblyWithFixture" executed="True" result="Success" success="True" time="1.844" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadAssemblyWithoutNamespaces" executed="True" result="Success" success="True" time="2.031" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadAssemblyWithSuite" executed="True" result="Success" success="True" time="1.703" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadMultipleAssemblies" executed="True" result="Success" success="True" time="2.094" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadMultipleAssembliesWithFixture" executed="True" result="Success" success="True" time="2.063" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.LoadMultipleAssembliesWithSuite" executed="True" result="Success" success="True" time="1.844" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.RunAssembly" executed="True" result="Success" success="True" time="2.563" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.RunAssemblyUsingBeginAndEndRun" executed="True" result="Success" success="True" time="2.391" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.RunMultipleAssemblies" executed="True" result="Success" success="True" time="2.578" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainRunnerTests.BasicRunnerTests.RunMultipleAssembliesUsingBeginAndEndRun" executed="True" result="Success" success="True" time="2.531" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestDomainTests" executed="True" result="Success" success="True" time="22.625" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.BasePathOverrideIsHonored" executed="True" result="Success" success="True" time="2.203" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.BinPathOverrideIsHonored" executed="True" result="Success" success="True" time="2.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.ConfigFileOverrideIsHonored" executed="True" result="Success" success="True" time="2.031" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.FileNotFound" executed="True" result="Success" success="True" time="11.422" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.InvalidTestFixture" executed="True" result="Success" success="True" time="1.688" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.SpecificTestFixture" executed="True" result="Success" success="True" time="2.266" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests.TurnOffShadowCopy" executed="True" result="Success" success="True" time="0.984" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestDomainTests_Multiple" executed="True" result="Success" success="True" time="2.781" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestDomainTests_Multiple.AssemblyNodes" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests_Multiple.BuildSuite" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests_Multiple.RootNode" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests_Multiple.RunMultipleAssemblies" executed="True" result="Success" success="True" time="0.469" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestDomainTests_Multiple.TestCaseCount" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestDomainTests_MultipleFixture" executed="True" result="Success" success="True" time="2.031" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestDomainTests_MultipleFixture.LoadFixture" executed="True" result="Success" success="True" time="2.031" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestLoaderAssemblyTests" executed="True" result="Success" success="True" time="10.609" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.AssemblyWithNoTests" executed="True" result="Success" success="True" time="3.156" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.FileNotFound" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.LoadProject" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.LoadTest" executed="True" result="Success" success="True" time="2.125" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.RunTest" executed="True" result="Success" success="True" time="3.172" asserts="9" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.UnloadProject" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderAssemblyTests.UnloadTest" executed="True" result="Success" success="True" time="2.141" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestLoaderWatcherTests" executed="True" result="Success" success="True" time="14.391" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestLoaderWatcherTests.LoadShouldStartWatcher" executed="True" result="Success" success="True" time="1.953" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderWatcherTests.LoadShouldStartWatcherDependingOnSettings" executed="True" result="Success" success="True" time="2.094" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderWatcherTests.ReloadShouldStartWatcher" executed="True" result="Success" success="True" time="4.078" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderWatcherTests.ReloadShouldStartWatcherDependingOnSettings" executed="True" result="Success" success="True" time="4.063" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.TestLoaderWatcherTests.UnloadShouldStopWatcherAndFreeResources" executed="True" result="Success" success="True" time="2.188" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="TestRunnerFactoryTests" executed="True" result="Success" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.TestRunnerFactoryTests.DifferentRuntimeUsesProcessRunner" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestRunnerFactoryTests.DifferentVersionUsesProcessRunner" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.TestRunnerFactoryTests.SameFrameworkUsesTestDomain" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="VisualStudioConverterTests" executed="True" result="Success" success="True" time="0.750" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromCppProject" executed="True" result="Success" success="True" time="0.313" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromCSharpProject" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromJsharpProject" executed="True" result="Success" success="True" time="0.031" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromMakefileProject" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromProjectWithHebrewFileIncluded" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromSolutionWithDisabledProject" executed="True" result="Success" success="True" time="0.063" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromVBProject" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromVSSolution2003" executed="True" result="Success" success="True" time="0.063" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromVSSolution2005" executed="True" result="Success" success="True" time="0.063" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.FromWebApplication" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VisualStudioConverterTests.WithUnmanagedCpp" executed="True" result="Success" success="True" time="0.047" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="VSProjectTests" executed="True" result="Success" success="True" time="0.594" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.FileNotFoundError" executed="True" result="Success" success="True" time="0.031" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.GenerateCorrectExtensionsFromVCProjectVS2005" executed="True" result="Success" success="True" time="0.031" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.InvalidProjectFormat" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.InvalidXmlFormat" executed="True" result="Success" success="True" time="0.344" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadCppProject" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadCppProjectVS2005" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadCppProjectWithMacros" executed="True" result="Success" success="True" time="0.016" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadCsharpProject" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadCsharpProjectVS2005" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadInvalidFileType" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadJsharpProject" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadJsharpProjectVS2005" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadProjectWithHebrewFileIncluded" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadProjectWithMissingOutputPath" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadVbProject" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.LoadVbProjectVS2005" executed="True" result="Success" success="True" time="0.016" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.MissingAttributes" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.NoConfigurations" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.NotWebProject" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.ProjectExtensions" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+                      <test-case name="NUnit.Util.Tests.VSProjectTests.SolutionExtension" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="XmlResultWriterTest" executed="True" result="Success" success="True" time="0.391" asserts="0">
+                    <results>
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.FailingTestHasCorrectInformation" executed="True" result="Success" success="True" time="0.016" asserts="7" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.HasMultipleCategories" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.HasMultipleProperties" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.HasSingleCategory" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.HasSingleProperty" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.IgnoredTestHasCorrectInformation" executed="True" result="Success" success="True" time="0.000" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.InconclusiveTestHasCorrectInformation" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.PassingTestHasCorrectInformation" executed="True" result="Success" success="True" time="0.000" asserts="6" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.SuiteResultHasCategories" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.TestHasCultureInfo" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                      <test-case name="NUnit.Util.Tests.XmlResultWriterTest.TestHasEnvironmentInfo" executed="True" result="Success" success="True" time="0.000" asserts="9" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
