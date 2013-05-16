@@ -1,12 +1,9 @@
 require "pre_push/version"
 
 module PrePush
+	@msbuild = 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe'
   def self.run assemblies
-  	spec = Gem::Specification.find_by_name("pre_push")
-		gem_root = spec.gem_dir
-		gem_lib = gem_root + "/lib"
-		puts gem_lib
-		puts assemblies
-  	system "#{gem_lib}/nunit262/nunit-console.exe '#{assemblies}'"
+		gem_lib = File.dirname(__FILE__)
+  	system "#{gem_lib}/nunit262/nunit-console.exe #{assemblies}"
   end
 end

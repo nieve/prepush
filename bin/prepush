@@ -1,4 +1,4 @@
 require "pre_push"
 puts ARGV[0]
 
-PrePush.run "C:/Program Files/NUnit 2.6.2/bin/tests/nunit.util.tests.dll"
+PrePush.run "C:/Code/Katas/MathTreeKata/MathTreeKataTests/bin/Debug/MathTreeKataTests.dll"
