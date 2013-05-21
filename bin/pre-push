@@ -4,7 +4,8 @@ require "pre_push"
 #puts ARGV[0]
 
 class Executor
-	@solution = "C:/Code/Katas/MathTreeKata/MathTreeKata.sln"
+	@solution = "path/to/your.sln"
+	#@assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] #if different to the solution.
 	include PrePush
 end
 
