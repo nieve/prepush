@@ -1,4 +1,16 @@
-require "pre_push"
-puts ARGV[0]
+#!/usr/bin/env ruby
 
-PrePush.run "C:/Code/Katas/MathTreeKata/MathTreeKataTests/bin/Debug/MathTreeKataTests.dll"
+require "pre_push"
+require "fileutils"
+#puts ARGV[0]
+
+puts "Couldn't find a git repository" if !Dir.exists?('.git')
+puts "Couldn't find the git hooks dir" if !Dir.exists?('.git/hooks')
+dest = File.dirname(__FILE__)
+FileUtils.cp("#{dest}/pre-push", ".git/hooks")
+# class Executor
+# 	@solution = "MathTreeKata.sln"
+# 	include PrePush
+# end
+
+# Executor.run

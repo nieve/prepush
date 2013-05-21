@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "pre_push"
+#puts ARGV[0]
+
+class Executor
+	@solution = "C:/Code/Katas/MathTreeKata/MathTreeKata.sln"
+	include PrePush
+end
+
+Executor.run
