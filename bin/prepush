@@ -6,12 +6,19 @@ require "fileutils"
 
 puts "Couldn't find a git repository" if !Dir.exists?('.git')
 puts "Couldn't find the git hooks dir" if !Dir.exists?('.git/hooks')
-dest = File.dirname(__FILE__)
-FileUtils.cp("#{dest}/pre-push", ".git/hooks")
-
-# validate ARGV[0] as runner
+bin = File.dirname(__FILE__)
+FileUtils.cp("#{bin}/pre-push", ".git/hooks")
 
 runner = ARGV[0] || 'nunit262'
+runners_dir = "#{bin}/../lib/runners"
+found = false
+Dir.entries(runners_dir).each {|file| found = true if file == runner}
+unless found
+	puts "Couldn't find test runner #{runner}"
+	exit(1)
+end
+# validate ARGV[0] as runner
+
 pre_push_hook = ".git/hooks/pre-push"
 file_text = File.read(pre_push_hook)
 content = file_text.gsub(/\{runner\}/, "\"#{runner}\"")

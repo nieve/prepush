@@ -23,7 +23,7 @@ module PrePush
 			gem_lib = File.dirname(__FILE__)
 			assemblies = assemblies || [@solution]
 			assemblies.each do |assembly|
-	  		system "#{gem_lib}/nunit262/nunit-console.exe #{assembly}"
+	  		system "#{gem_lib}/runners/nunit262/nunit-console.exe #{assembly}"
 	  		$?.success?
 	  	end
 	  end
