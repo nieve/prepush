@@ -5,6 +5,7 @@ require "pre_push"
 
 class Executor
 	@solution = "path/to/your.sln"
+	@test_runner = {runner}
 	#@assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] #if different to the solution.
 	include PrePush
 end
