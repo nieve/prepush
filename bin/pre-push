@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
 
 require "pre_push"
-#puts ARGV[0]
 
 class Executor
-	@solution = "path/to/your.sln"
+	### change only if you change your test runner
 	@test_runner = {runner}
-	#@assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] #if different to the solution.
+	###
+
+	@solution = "path/to/your.sln"
+	# @assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] #uncomment & insert if different to the solution.
 	include PrePush
 end
 

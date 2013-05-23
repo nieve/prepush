@@ -23,15 +23,20 @@ module PrePush
 			gem_lib = File.dirname(__FILE__)
 			assemblies = assemblies || [@solution]
 			assemblies.each do |assembly|
-	  		system "#{gem_lib}/runners/nunit262/nunit-console.exe #{assembly}"
+				exe = @runners_exes[@test_runner]
+	  		system "#{gem_lib}/runners/#{@test_runner}/#{exe} #{assembly}"
 	  		$?.success?
 	  	end
 	  end
 	end
 
 	def self.included(receiver)
+		@runners_exes = {}
+		bin = File.dirname(__FILE__)
+		runners_dir = "#{bin}/../lib/runners"
+		Dir.entries(runners_dir).each {|file| @runners_exes[file] = Dir.entries(file).detect{|f| f.end_with?('.exe')}}
+
 		receiver.extend         ClassMethods
 		#receiver.send :include, InstanceMethods
 	end
 end
-# TODO: upon prepush install drop a pre-push hook & a ruby file with module including PrePush & necessary solution/assemblies.
