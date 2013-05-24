@@ -8,7 +8,7 @@ module PrePush
 				puts 'build has failed'
 				exit(1)
 			end
-			success = run_tests @assemblies
+			success = run_tests(@assemblies)
 			if (!success)
 				puts 'Tests have failed'
 				exit(1)
@@ -24,11 +24,13 @@ module PrePush
 	  	set_exes_cache
 			gem_lib = File.dirname(__FILE__)
 			assemblies = assemblies || [@solution]
+			success = true
 			assemblies.each do |assembly|
 				exe = @runners_exes[@test_runner]
 	  		system "\"#{gem_lib}/runners/#{@test_runner}/#{exe}\" \"#{assembly}\""
-	  		$?.success?
+	  		success &= $?.success?
 	  	end
+	  	success
 	  end
 
 	  private
