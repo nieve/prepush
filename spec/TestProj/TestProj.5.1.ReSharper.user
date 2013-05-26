@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="TestFixture" priority="0" />
+      <Item value="public" priority="3" />
+      <Item value="class" priority="1" />
+      <Item value="Xunit" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="Fact" priority="0" />
+      <Item value="Assert" priority="0" />
+      <Item value="Test" priority="0" />
+      <Item value="NUnit" priority="0" />
+      <Item value="Framework" priority="0" />
+      <Item value="It" priority="0" />
+      <Item value="CreateLambda" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Xunit.Assert">
+      <Item value="Equal`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="Equals`0" priority="0" />
+      <Item value="AreEqual`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ShouldEqual`1" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/d:Properties/f:AssemblyInfo.cs" caret="1000" fromTop="23" />
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="229" fromTop="11" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="425" fromTop="17" />
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="303" fromTop="16" />
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="559" fromTop="26" />
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="177" fromTop="7" />
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="287" fromTop="11" />
+      <File id="D29E34F2-D326-48EB-9354-D6882867A7A3/f:AllTests.cs" caret="0" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.6.2\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
