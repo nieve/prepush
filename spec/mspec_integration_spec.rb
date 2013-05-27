@@ -4,6 +4,7 @@ class MspecRunnerTester
 	@solution = "spec/TestProj/TestProj/TestProj.csproj"
 	@assemblies = ["C:/Code/Ruby Projects/prepush/spec/TestProj/TestProj/bin/Debug/TestProj.exe"]
 	@test_runner = 'mspec'
+	@runner_exe = 'mspec-clr4.exe'
 	include PrePush
 end
 

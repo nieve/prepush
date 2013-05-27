@@ -27,7 +27,6 @@ module PrePush
 			success = true
 			assemblies.each do |assembly|
 				exe = @runners_exes[@test_runner]
-	  		puts "\"#{gem_lib}/runners/#{@test_runner}/#{exe}\" \"#{assembly}\""
 	  		system "\"#{gem_lib}/runners/#{@test_runner}/#{exe}\" \"#{assembly}\""
 	  		success &= $?.success?
 	  	end
@@ -38,12 +37,12 @@ module PrePush
 	  def set_exes_cache
 	  	if (@runners_exes == nil || @runners_exes.empty?) then
 				@runners_exes = {}
-		  	#	bin = File.dirname(__FILE__)
-				# runners_dir = "#{bin}/../lib/runners"
-				# Dir.entries(runners_dir).each {|file| @runners_exes[file] = Dir.entries("#{runners_dir}/#{file}").detect{|f| f.end_with?('.exe')}}	
-				@runners_exes['nunit262'] = 'nunit-console.exe'
-				@runners_exes['mspec'] = 'mspec-clr4.exe'
-				@runners_exes['xunit191'] = 'xunit.console.exe'
+		  		bin = File.dirname(__FILE__)
+				runners_dir = "#{bin}/../lib/runners"
+				Dir.entries(runners_dir).each {|file| @runners_exes[file] = @runner_exe || Dir.entries("#{runners_dir}/#{file}").detect{|f| f.end_with?('.exe')}}	
+				@runners_exes['nunit262'] = @runner_exe || 'nunit-console.exe'
+				@runners_exes['mspec'] = @runner_exe || 'mspec-clr4.exe'
+				@runners_exes['xunit191'] = @runner_exe || 'xunit.console.exe'
 			end
 	  end
 	end
