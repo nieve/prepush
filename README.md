@@ -1,6 +1,8 @@
 # PrePush
 
 Add a pre-push git hook on any of your repos to build & run tests of your .net project.
+As of Git 1.8.2 you can use a pre-push hook (https://raw.github.com/git/git/master/Documentation/RelNotes/1.8.2.txt).
+This gem will allow you to use a ready made hook to build your solution & run tests with either nunit, xunit or mspec.
 
 ## Installation
 
@@ -26,7 +28,7 @@ After installing the gem, cd to the git repository you wish to add the hook to
 		$ prepush xunit191
 
 the first will use nunit (2.6.2) for running your tests.
-And insert the solution or assemblies paths.
+Insert the solution or assemblies paths.
 
 ## Contributing
 
