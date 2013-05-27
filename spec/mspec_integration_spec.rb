@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 class MspecRunnerTester
-	@solution = "C:/Code/Katas/MathTreeKata/MathTreeKataTests/MathTreeKataTests.csproj" #"spec/TestProj/TestProj.sln"
+	@solution = "spec/TestProj/TestProj/TestProj.csproj"
+	@assemblies = ["C:/Code/Ruby Projects/prepush/spec/TestProj/TestProj/bin/Debug/TestProj.exe"]
 	@test_runner = 'mspec'
 	include PrePush
 end

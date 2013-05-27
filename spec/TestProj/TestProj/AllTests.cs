@@ -5,6 +5,13 @@ using Assert = Xunit.Assert;
 
 namespace TestProj
 {
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+
     [TestFixture]
     public class NunitTests
     {
@@ -26,6 +33,6 @@ namespace TestProj
 
     public class MspecTests
     {
-        public It should_equal_one = () => 1.ShouldEqual(1);
+        Machine.Specifications.It should_equal_one = () => 1.ShouldEqual(1);
     }
 }
