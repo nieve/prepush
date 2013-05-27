@@ -1,6 +1,6 @@
 # PrePush
 
-TODO: Write a gem description
+Add a pre-push git hook on any of your repos to build & run tests of your .net project.
 
 ## Installation
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem, cd to the git repository you wish to add the hook to 
+(the directory containing a .git dir) and from there use one of the following:
+	
+		$ prepush
+		$ prepush mspec
+		$ prepush xunit191
+
+the first will use nunit (2.6.2) for running your tests.
+And insert the solution or assemblies paths.
 
 ## Contributing
 
