@@ -29,6 +29,7 @@ After installing the gem, cd to the git repository you wish to add the hook to
 
 the first will use nunit (2.6.2) for running your tests.
 Insert the solution or assemblies paths.
+If you're using mspec, you may need to specify the dlls you wish to test in the @assemblies array variable. Failing to do so may result in the error "Could not load file or assembly 'path/to/your.sln' or one of its dependencies. The module was expected to contain an assembly manifest."
 
 ## Contributing
 

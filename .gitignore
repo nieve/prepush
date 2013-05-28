@@ -19,3 +19,4 @@ tmp
 bin/
 obj/
 _ReSharper*
+*ReSharper*
