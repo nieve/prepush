@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["nieve"]
   spec.email         = ["nievegoor@gmail.com"]
   spec.description   = %q{adding a pre-push hook for git to compile & run tests}
-  spec.summary       = %q{adding a pre-push hook for git to compile & run tests}
-  spec.homepage      = ""
+  spec.summary       = %q{Add a pre-push git hook on any of your repos to build & run tests of your .net project.}
+  spec.homepage      = "https://github.com/nieve/prepush"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
