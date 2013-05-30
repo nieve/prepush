@@ -2,6 +2,7 @@ require "pre_push/version"
 
 module PrePush
 	module ClassMethods
+		MSBuildPaths = {:clr4 => 'C:/Windows/Microsoft.NET/Framework/v4.0.30319', :clr2 => 'C:/Windows/Microsoft.NET/Framework/v2.0.50727'}
 		def run
 			success = build
 			if (!success)
@@ -16,7 +17,12 @@ module PrePush
 		end
 		def build
 			set_exes_cache
-			msbuild = 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe'
+			clr = @clr == nil ? :clr4 : @clr.to_sym
+			if MSBuildPaths[clr] == nil
+				puts 'please assign clr2 or clr4 to @clr'
+				exit(1)
+			end
+			msbuild = "#{MSBuildPaths[clr]}/MSBuild.exe"
 			system "#{msbuild} #{@solution}"
 			$?.success?
 		end

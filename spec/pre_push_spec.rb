@@ -5,6 +5,18 @@ class Dummy
 	include PrePush
 end
 
+class DummyClr2
+	@clr = 'clr2'
+	@solution = "solution/path/whammy"
+	include PrePush
+end
+
+class DummyClr666
+	@clr = 'clr666'
+	@solution = "solution/path/whammy"
+	include PrePush
+end
+
 class SetExeDummy
 	@solution = 'meh'
 	@runner_exe = 'bar.exe'
@@ -28,6 +40,19 @@ describe PrePush do
 		it "should call system to build the solution" do
 			Dummy.should_receive("system").with(/solution\/path\/whammy$/)
 			Dummy.build
+		end
+		it "should use clr4 msbuild when no clr specified" do
+			Dummy.should_receive("system").with(/^C:\/Windows\/Microsoft.NET\/Framework\/v4.0.30319/)
+			Dummy.build
+		end
+		it "should use clr2 msbuild when clr2 specified" do
+			DummyClr2.should_receive("system").with(/^C:\/Windows\/Microsoft.NET\/Framework\/v2.0.50727/)
+			DummyClr2.build
+		end
+		it "should exit when inexistent clr specified" do
+			DummyClr666.should_receive("puts").with('please assign clr2 or clr4 to @clr')
+			DummyClr666.should_receive("exit").with(1)
+			DummyClr666.build
 		end
 	end
 	describe 'run_tests' do
