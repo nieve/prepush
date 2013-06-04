@@ -17,13 +17,13 @@ module PrePush
 			it "should fail when runner not found" do
 				Dir.stub('exists?').with('.git').and_return(true)
 				Dir.stub('exists?').with('.git/hooks').and_return(true)
-				PrePush::Validator.should_receive('puts').with("Couldn't find test runner non-existant-runner")
+				PrePush::Validator.should_receive('puts').with(/^Couldn't find test runner non-existant-runner/)
 				PrePush::Validator.validate('non-existant-runner').should be false
 			end
 			it "should validate when runner found" do
 				Dir.stub('exists?').with('.git').and_return(true)
 				Dir.stub('exists?').with('.git/hooks').and_return(true)
-				Dir.stub('entries').with(/lib\/runners$/).and_return(['existant-runner'])
+				Dir.stub('entries').with(/lib\/runners$/).and_return(['existant-runner.rb'])
 				PrePush::Validator.validate('existant-runner').should be true
 			end
 		end

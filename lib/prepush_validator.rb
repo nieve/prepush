@@ -11,10 +11,10 @@ module PrePush
 			end
 			bin = File.dirname(__FILE__)
 			runners_dir = "#{bin}/../lib/runners"
-			found = false
-			Dir.entries(runners_dir).each {|file| found = true if file == runner}
+			found = Dir.entries(runners_dir).any?{|file| file == "#{runner}.rb"}
 			unless found
-				puts "Couldn't find test runner #{runner}"
+				all = Dir.entries(runners_dir).select{|f| !File.directory? f}.join(', ')
+				puts "Couldn't find test runner #{runner} in #{all}"
 				return false
 			end
 			return true
