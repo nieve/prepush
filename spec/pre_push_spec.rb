@@ -21,8 +21,8 @@ class SetExeDummy
 	@solution = 'meh'
 	@runner_exe = 'bar.exe'
 	@test_runner = 'nunit262'
-	def self.get_runner_exe(key)
-		@runners_exes[key]
+	def self.get_runners_exes
+		@runners_exes
 	end
 	def self.set_exes
 		self.build
@@ -72,10 +72,13 @@ describe PrePush do
 		end
 	end
 	describe 'set_exes_cache' do
-		it 'should add predefined runner exe' do
+		it 'should set runners individually and uniquely' do
 			SetExeDummy.should_receive("system").with(/meh$/)
 			SetExeDummy.set_exes
-			SetExeDummy.get_runner_exe('nunit262').should == 'bar.exe'
+			subject = SetExeDummy.get_runners_exes
+			subject[subject.keys[0]].should_not == subject[subject.keys[1]]
+			subject[subject.keys[0]].should_not == subject[subject.keys[2]]
+			subject[subject.keys[1]].should_not == subject[subject.keys[2]]
 		end
 	end
 end

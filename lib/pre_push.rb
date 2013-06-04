@@ -43,12 +43,13 @@ module PrePush
 	  def set_exes_cache
 	  	if (@runners_exes == nil || @runners_exes.empty?) then
 				@runners_exes = {}
-		  		bin = File.dirname(__FILE__)
-				runners_dir = "#{bin}/../lib/runners"
-				Dir.entries(runners_dir).each {|file| @runners_exes[file] = @runner_exe || Dir.entries("#{runners_dir}/#{file}").detect{|f| f.end_with?('.exe')}}	
-				@runners_exes['nunit262'] = @runner_exe || 'nunit-console.exe'
-				@runners_exes['mspec'] = @runner_exe || 'mspec-clr4.exe'
-				@runners_exes['xunit191'] = @runner_exe || 'xunit.console.exe'
+		  	bin = File.dirname(__FILE__)
+				config_dir = "#{bin}/../lib/runners_config"
+				Dir.entries(config_dir).select{|f| !File.directory? f}.each do |file|
+					load "#{bin}/../lib/runners_config/#{file}"
+					name = file.gsub('.rb','')
+					@runners_exes[name] = RunnerConfig.new().runner
+				end
 			end
 	  end
 	end
