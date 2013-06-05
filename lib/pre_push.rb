@@ -2,6 +2,7 @@ require "pre_push/version"
 
 module PrePush
 	module ClassMethods
+		attr :runner
 		MSBuildPaths = {:clr4 => 'C:/Windows/Microsoft.NET/Framework/v4.0.30319', :clr2 => 'C:/Windows/Microsoft.NET/Framework/v2.0.50727'}
 		def run
 			success = build
@@ -48,7 +49,7 @@ module PrePush
 				Dir.entries(config_dir).select{|f| !File.directory? f}.each do |file|
 					load "#{bin}/../lib/runners_config/#{file}"
 					name = file.gsub('.rb','')
-					@runners_exes[name] = RunnerConfig.new().runner
+					@runners_exes[name] = Container.runner
 				end
 			end
 	  end
@@ -59,3 +60,18 @@ module PrePush
 		#receiver.send :include, InstanceMethods
 	end
 end
+
+class Container
+	class << self
+		attr_accessor :runner
+	end
+end
+
+module Config
+	private
+	def use(runner)
+		Container.runner = runner
+	end
+end
+
+self.extend Config

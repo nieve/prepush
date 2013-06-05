@@ -1,5 +1,1 @@
-class RunnerConfig
-	def runner
-		'nunit-console.exe'
-	end
-end
+use	'nunit-console.exe'

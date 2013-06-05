@@ -1,5 +1,1 @@
-class RunnerConfig
-	def runner
-		'mspec-clr4.exe'
-	end
-end
+use	'mspec-clr4.exe'
