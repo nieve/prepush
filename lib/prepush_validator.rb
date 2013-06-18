@@ -11,7 +11,7 @@ module PrePush
 			end
 			bin = File.dirname(__FILE__)
 			runners_dir = "#{bin}/../lib/runners"
-			found = Dir.entries(runners_dir).any?{|file| file == "#{runner}.rb"}
+			found = Dir.entries(runners_dir).any?{|file| file == "#{runner}"}
 			unless found
 				all = Dir.entries(runners_dir).select{|f| !File.directory? f}.join(', ')
 				puts "Couldn't find test runner #{runner} in #{all}"

@@ -23,7 +23,7 @@ module PrePush
 			it "should validate when runner found" do
 				Dir.stub('exists?').with('.git').and_return(true)
 				Dir.stub('exists?').with('.git/hooks').and_return(true)
-				Dir.stub('entries').with(/lib\/runners$/).and_return(['existant-runner.rb'])
+				Dir.stub('entries').with(/lib\/runners$/).and_return(['existant-runner'])
 				PrePush::Validator.validate('existant-runner').should be true
 			end
 		end
