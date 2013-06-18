@@ -1,7 +1,5 @@
-﻿using Machine.Specifications;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Xunit;
-using Assert = Xunit.Assert;
 
 namespace TestProj
 {
@@ -27,12 +25,7 @@ namespace TestProj
         [Fact]
         public void OneEqualsOne()
         {
-            Assert.Equal(1,1);
+            Xunit.Assert.Equal(1, 1);
         }
-    }
-
-    public class MspecTests
-    {
-        It should_equal_one = () => 1.ShouldEqual(1);
     }
 }

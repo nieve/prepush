@@ -1,1 +1,1 @@
-use	'xunit.console.exe'
+use_runner 'xunit.console.exe'

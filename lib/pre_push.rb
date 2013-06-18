@@ -3,7 +3,7 @@ require "pre_push/version"
 module PrePush
 	module ClassMethods
 		attr :runner
-		MSBuildPaths = {:clr4 => 'C:/Windows/Microsoft.NET/Framework/v4.0.30319', :clr2 => 'C:/Windows/Microsoft.NET/Framework/v2.0.50727'}
+		MSBuildPaths = {:clr4 => 'C:/Windows/Microsoft.NET/Framework/v4.0.30319'}
 		def run
 			success = build
 			if (!success)
@@ -18,12 +18,7 @@ module PrePush
 		end
 		def build
 			set_exes_cache
-			clr = @clr == nil ? :clr4 : @clr.to_sym
-			if MSBuildPaths[clr] == nil
-				puts 'please assign clr2 or clr4 to @clr'
-				exit(1)
-			end
-			msbuild = "#{MSBuildPaths[clr]}/MSBuild.exe"
+			msbuild = "#{MSBuildPaths[:clr4]}/MSBuild.exe"
 			system "#{msbuild} #{@solution}"
 			$?.success?
 		end
@@ -67,11 +62,11 @@ class Container
 	end
 end
 
-module Config
+module PrepushConfig
 	private
-	def use(runner)
+	def use_runner(runner)
 		Container.runner = runner
 	end
 end
 
-self.extend Config
+self.extend PrepushConfig

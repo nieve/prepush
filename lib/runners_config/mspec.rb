@@ -1,1 +1,1 @@
-use	'mspec-clr4.exe'
+use_runner 'mspec-clr4.exe'

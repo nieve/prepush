@@ -45,15 +45,6 @@ describe PrePush do
 			Dummy.should_receive("system").with(/^C:\/Windows\/Microsoft.NET\/Framework\/v4.0.30319/)
 			Dummy.build
 		end
-		it "should use clr2 msbuild when clr2 specified" do
-			DummyClr2.should_receive("system").with(/^C:\/Windows\/Microsoft.NET\/Framework\/v2.0.50727/)
-			DummyClr2.build
-		end
-		it "should exit when inexistent clr specified" do
-			DummyClr666.should_receive("puts").with('please assign clr2 or clr4 to @clr')
-			DummyClr666.should_receive("exit").with(1)
-			DummyClr666.build
-		end
 	end
 	describe 'run_tests' do
 		it 'should call system to run tests in specified assemblies' do

@@ -1,1 +1,1 @@
-use	'nunit-console.exe'
+use_runner 'nunit-console.exe'
