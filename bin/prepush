@@ -9,7 +9,7 @@ runner = ARGV[0] || 'nunit262'
 
 if PrePush::Validator.validate(runner)
 	bin = File.dirname(__FILE__)
-	FileUtils.cp("#{bin}/pre-push", ".git/hooks")
+	FileUtils.cp("#{bin}/template/pre-push", ".git/hooks")
 
 	pre_push_hook = ".git/hooks/pre-push"
 	file_text = File.read(pre_push_hook)

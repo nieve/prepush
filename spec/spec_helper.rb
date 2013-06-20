@@ -5,6 +5,7 @@ require 'rspec/expectations'
 require 'nokogiri'
 require 'pre_push'
 require 'prepush_validator'
+require 'sln_finder'
 
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
