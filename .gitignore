@@ -16,7 +16,8 @@ test/tmp
 test/version_tmp
 tmp
 *TestResult.xml
-bin/
+spec/TestProj/TestProj/bin/
+spec/TestProj/TestProj2/bin/
 obj/
 _ReSharper*
 *ReSharper*
