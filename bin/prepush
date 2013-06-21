@@ -2,6 +2,7 @@
 
 require "pre_push"
 require "prepush_validator"
+require "sln_finder"
 require "fileutils"
 
 
@@ -13,7 +14,8 @@ if PrePush::Validator.validate(runner)
 
 	pre_push_hook = ".git/hooks/pre-push"
 	file_text = File.read(pre_push_hook)
-	content = file_text.gsub(/\{runner\}/, "\"#{runner}\"")
+	sln_path = PrePush::SlnFinder.find || "path/to/your.sln"
+	content = file_text.gsub(/\{runner\}/, "\"#{runner}\"").gsub(/\{sln_path\}/, "\"#{sln_path}\"")
 	File.open(pre_push_hook, "w") {|file| file.puts content}
 	puts "the pre-push hook has been dropped into your hooks dir; please modify it to build your assembly & run your tests."
 end

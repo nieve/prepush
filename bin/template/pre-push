@@ -7,7 +7,7 @@ class Executor
 	@test_runner = {runner}
 	###
 
-	@solution = "path/to/your.sln" # the path to the solution to build
+	@solution = {sln_path} # the path to the solution to build
 	# @assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] #uncomment & insert dlls to test if different to the solution.
 	include PrePush
 end

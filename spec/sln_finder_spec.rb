@@ -6,7 +6,7 @@ module PrePush
 			it "should return first sln file found" do
 				Dir.stub('entries').and_return(['second.sln','first.sln'])
 				File.stub('file?').with(anything()).and_return(true)
-				PrePush::SlnFinder.find().should == 'second.sln'
+				PrePush::SlnFinder.find().should == './second.sln'
 			end
 			it "should return nested sln when none found at top level" do
 				Dir.stub('entries').with('.').and_return(['second.sn','first.sl', 'nested'])
@@ -19,7 +19,7 @@ module PrePush
 				File.stub('file?').with('./first.sln').and_return(true)
 				File.stub('file?').with('./second.sln').and_return(true)
 				File.stub('directory?').with('./nested').and_return(true)
-				PrePush::SlnFinder.find().should == 'first.sln'
+				PrePush::SlnFinder.find().should == './nested/first.sln'
 			end
 			it "should disregard . and .. directories" do
 				Dir.stub('entries').with('.').and_return(['second.sn','.', '..'])
