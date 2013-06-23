@@ -24,11 +24,22 @@ After installing the gem, cd to the git repository you wish to add the hook to
 (the directory containing a .git dir) and from there use one of the following:
 	
 		$ prepush
-		$ prepush mspec
-		$ prepush xunit191
+		$ prepush /r=mspec
+		$ prepush /r=xunit191
 
 the first will use nunit (2.6.2) for running your tests.
-Insert the solution or assemblies paths.
+By default, the pre-push hook will use the first .sln file it finds.
+
+The arguments accepted are:
+	
+		/r={test runner}
+		/td={testable dlls}
+
+If you wish to specify the dlls that your test runner should run/test use:
+	
+		$ prepush /td=./path/to/some.dll,./path/to/another.dll
+
+You can also modify the solution, dlls & even runner on the dropped pre-push file itself.
 If you're using mspec, you may need to specify the dlls you wish to test in the @assemblies array variable. Failing to do so may result in the error "Could not load file or assembly 'path/to/your.sln' or one of its dependencies. The module was expected to contain an assembly manifest."
 
 ## Contributing
