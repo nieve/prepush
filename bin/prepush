@@ -3,10 +3,15 @@
 require "pre_push"
 require "prepush_validator"
 require "sln_finder"
+require "args_parser"
 require "fileutils"
 
 
-runner = ARGV[0] || 'nunit262'
+parsed_args = PrePush::ArgsParser.execute(ARGV)
+runner = parsed_args[:runner]
+test_dlls = parsed_args[:test_dlls]
+assemblies_line = "@assemblies = {dtt} # insert dlls to test if different to the solution."
+commented_assemblies_line = "# @assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] # insert dlls to test if different to the solution."
 
 if PrePush::Validator.validate(runner)
 	bin = File.dirname(__FILE__)
@@ -16,6 +21,11 @@ if PrePush::Validator.validate(runner)
 	file_text = File.read(pre_push_hook)
 	sln_path = PrePush::SlnFinder.find || "path/to/your.sln"
 	content = file_text.gsub(/\{runner\}/, "\"#{runner}\"").gsub(/\{sln_path\}/, "\"#{sln_path}\"")
+	if test_dlls != nil
+		content = content.gsub(/\{dtt\}/, "#{test_dlls}")
+	else 
+		content = content.sub(assemblies_line, commented_assemblies_line)
+	end
 	File.open(pre_push_hook, "w") {|file| file.puts content}
 	puts "the pre-push hook has been dropped into your hooks dir; please modify it to build your assembly & run your tests."
 end

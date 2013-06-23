@@ -26,6 +26,7 @@ module PrePush
 	  	set_exes_cache
 			gem_lib = File.dirname(__FILE__)
 			assemblies = assemblies || [@solution]
+			assemblies = assemblies.empty? ? [@solution] : assemblies
 			success = true
 			assemblies.each do |assembly|
 				exe = @runners_exes[@test_runner]

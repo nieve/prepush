@@ -6,6 +6,7 @@ require 'nokogiri'
 require 'pre_push'
 require 'prepush_validator'
 require 'sln_finder'
+require 'args_parser'
 
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'

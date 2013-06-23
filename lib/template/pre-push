@@ -3,13 +3,13 @@
 require "pre_push"
 
 class Executor
+	include PrePush
 	### change only if you change your test runner
 	@test_runner = {runner}
 	###
 
 	@solution = {sln_path} # the path to the solution to build
-	# @assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] #uncomment & insert dlls to test if different to the solution.
-	include PrePush
+	@assemblies = {dtt} # insert dlls to test if different to the solution.
 end
 
 Executor.run
