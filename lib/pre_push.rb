@@ -2,7 +2,6 @@ require "pre_push/version"
 
 module PrePush
 	module ClassMethods
-		attr :runner
 		MSBuildPaths = {:clr4 => 'C:/Windows/Microsoft.NET/Framework/v4.0.30319'}
 		def run
 			success = build
@@ -17,19 +16,16 @@ module PrePush
 			end
 		end
 		def build
-			set_exes_cache
-			msbuild = "#{MSBuildPaths[:clr4]}/MSBuild.exe"
 			system "#{msbuild} #{@solution}"
 			$?.success?
 		end
 	  def run_tests assemblies
-	  	set_exes_cache
-			gem_lib = File.dirname(__FILE__)
+	  	gem_lib = File.dirname(__FILE__)
 			assemblies = assemblies || [@solution]
 			assemblies = assemblies.empty? ? [@solution] : assemblies
 			success = true
 			assemblies.each do |assembly|
-				exe = @runners_exes[@test_runner]
+				exe = runners_exes[@test_runner]
 	  		system "\"#{gem_lib}/runners/#{@test_runner}/#{exe}\" \"#{assembly}\""
 	  		success &= $?.success?
 	  	end
@@ -37,17 +33,15 @@ module PrePush
 	  end
 
 	  private
-	  def set_exes_cache
-	  	if (@runners_exes == nil || @runners_exes.empty?) then
-				@runners_exes = {}
-		  	bin = File.dirname(__FILE__)
-				config_dir = "#{bin}/../lib/runners_config"
-				Dir.entries(config_dir).select{|f| !File.directory? f}.each do |file|
-					load "#{bin}/../lib/runners_config/#{file}"
-					name = file.gsub('.rb','')
-					@runners_exes[name] = Container.runner
-				end
-			end
+	  def msbuild
+	  	'C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe'
+	  end
+	  def runners_exes
+	  	{
+				'mspec' => 'mspec-clr4.exe',
+				'nunit262' => 'nunit-console.exe',
+				'xunit191' => 'xunit.console.exe'
+			}	  	
 	  end
 	end
 
@@ -56,18 +50,3 @@ module PrePush
 		#receiver.send :include, InstanceMethods
 	end
 end
-
-class Container
-	class << self
-		attr_accessor :runner
-	end
-end
-
-module PrepushConfig
-	private
-	def use_runner(runner)
-		Container.runner = runner
-	end
-end
-
-self.extend PrepushConfig

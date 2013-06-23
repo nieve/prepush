@@ -68,14 +68,4 @@ describe PrePush do
 			Dummy.run
 		end
 	end
-	describe 'set_exes_cache' do
-		it 'should set runners individually and uniquely' do
-			SetExeDummy.should_receive("system").with(/meh$/)
-			SetExeDummy.set_exes
-			subject = SetExeDummy.get_runners_exes
-			subject[subject.keys[0]].should_not == subject[subject.keys[1]]
-			subject[subject.keys[0]].should_not == subject[subject.keys[2]]
-			subject[subject.keys[1]].should_not == subject[subject.keys[2]]
-		end
-	end
 end

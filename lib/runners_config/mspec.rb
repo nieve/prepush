@@ -1,1 +1,0 @@
-use_runner 'mspec-clr4.exe'

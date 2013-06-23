@@ -1,1 +1,0 @@
-use_runner 'xunit.console.exe'
