@@ -2,7 +2,11 @@ module PrePush
 	class ArgsParser
 		class << self
 			attr_accessor :args_props
-			ArgsParser.args_props = {'r' => [:runner, :str], 'td' => [:test_dlls, :array]}
+			ArgsParser.args_props = {
+				'r' => [:runner, :str], 
+				'td' => [:test_dlls, :array], 
+				'msb' => [:msbuild, :str]
+			}
 		end
 		def self.execute args
 			result = {:runner => 'nunit262'}

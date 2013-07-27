@@ -2,7 +2,6 @@ require "pre_push/version"
 
 module PrePush
 	module ClassMethods
-		MSBuildPaths = {:clr4 => 'C:/Windows/Microsoft.NET/Framework/v4.0.30319'}
 		def run
 			success = build
 			if (!success)
@@ -36,12 +35,17 @@ module PrePush
 	  def msbuild
 	  	'C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe'
 	  end
+	  def override_msbuild custom_msbuild
+	  	define_singleton_method :msbuild do
+	  		custom_msbuild
+	  	end
+	  end
 	  def runners_exes
 	  	{
 				'mspec' => 'mspec-clr4.exe',
 				'nunit262' => 'nunit-console.exe',
 				'xunit191' => 'xunit.console.exe'
-			}	  	
+			}
 	  end
 	end
 

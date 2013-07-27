@@ -34,10 +34,16 @@ The arguments accepted are:
 	
 		/r={test runner}
 		/td={testable dlls}
+		/msb={path/to/custom/MSBuild.exe}
 
 If you wish to specify the dlls that your test runner should run/test use:
 	
 		$ prepush /td=./path/to/some.dll,./path/to/another.dll
+
+The default msbuild path used is C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe.
+If you wish to override it use:
+		
+		$ prepush /msb=c:/my/path/to/MSBuild.exe
 
 You can also modify the solution, dlls & even runner on the dropped pre-push file itself.
 If you're using mspec, you may need to specify the dlls you wish to test in the @assemblies array variable. Failing to do so may result in the error "Could not load file or assembly 'path/to/your.sln' or one of its dependencies. The module was expected to contain an assembly manifest."

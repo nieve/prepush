@@ -11,23 +11,8 @@ class EmptyDllsDummy
 	include PrePush
 end
 
-class DummyClr2
-	@clr = 'clr2'
-	@solution = "solution/path/whammy"
-	include PrePush
-end
-
-class SetExeDummy
-	@solution = 'meh'
-	@runner_exe = 'bar.exe'
-	@test_runner = 'nunit262'
-	def self.get_runners_exes
-		@runners_exes
-	end
-	def self.set_exes
-		self.build
-	end
-	include PrePush
+class DummyCustomMSBuild < Dummy
+	override_msbuild 'path/to/custom/msbuild.exe'
 end
 
 class NilClass
@@ -42,8 +27,12 @@ describe PrePush do
 			Dummy.build
 		end
 		it "should use clr4 msbuild when no clr specified" do
-			Dummy.should_receive("system").with(/^C:\/Windows\/Microsoft.NET\/Framework\/v4.0.30319/)
+			Dummy.should_receive("system").with(/^C:\/Windows\/Microsoft.NET\/Framework\/v4.0.30319\/MSBuild.exe/)
 			Dummy.build
+		end
+		it "should use custom msbuild when specified" do
+			DummyCustomMSBuild.should_receive("system").with(/^path\/to\/custom\/msbuild.exe/)
+			DummyCustomMSBuild.build
 		end
 	end
 	describe 'run_tests' do

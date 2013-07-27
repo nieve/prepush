@@ -10,8 +10,7 @@ require "fileutils"
 parsed_args = PrePush::ArgsParser.execute(ARGV)
 runner = parsed_args[:runner]
 test_dlls = parsed_args[:test_dlls]
-assemblies_line = "@assemblies = {dtt} # insert dlls to test if different to the solution."
-commented_assemblies_line = "# @assemblies = ['path/to/first/test.dll','path/to/second/test.dll'] # insert dlls to test if different to the solution."
+msbuild = parsed_args[:msbuild]
 
 if PrePush::Validator.validate(runner)
 	bin = File.dirname(__FILE__)
@@ -22,9 +21,10 @@ if PrePush::Validator.validate(runner)
 	sln_path = PrePush::SlnFinder.find || "path/to/your.sln"
 	content = file_text.gsub(/\{runner\}/, "\"#{runner}\"").gsub(/\{sln_path\}/, "\"#{sln_path}\"")
 	if test_dlls != nil
-		content = content.gsub(/\{dtt\}/, "#{test_dlls}")
-	else 
-		content = content.sub(assemblies_line, commented_assemblies_line)
+		content = content.sub("# @assemblies = {test_dlls}", "@assemblies = #{test_dlls}")
+	end
+	if msbuild != nil
+		content = content.sub("# override_msbuild 'path/to/custom/msbuild.exe'","override_msbuild '#{msbuild}'")
 	end
 	File.open(pre_push_hook, "w") {|file| file.puts content}
 	puts "the pre-push hook has been dropped into your hooks dir; please modify it to build your assembly & run your tests."

@@ -19,6 +19,12 @@ module PrePush
 					result[:runner].should == "mspec"
 				end
 			end
+			describe "when /msb is specfied" do
+				it "should return a result with a string msbuild" do
+					result = PrePush::ArgsParser.execute(["/msb=path/to/custom/msbuild.exe"])
+					result[:msbuild].should == "path/to/custom/msbuild.exe"
+				end
+			end
 			describe "when /td is specified" do
 				it "should parse value as an array" do
 					result = PrePush::ArgsParser.execute(["/td=./path/to/testable.dll"])
