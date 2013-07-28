@@ -1,5 +1,5 @@
 require "pre_push/version"
-require_relative "msbuild.rb"
+require "msbuild"
 
 module PrePush
 	module ClassMethods

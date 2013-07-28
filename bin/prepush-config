@@ -6,4 +6,7 @@ puts "This will make sure all of your prepush hooks will use '#{arg}' to build y
 input = STDIN.gets.chomp
 if input.empty? || input.downcase == 'y'
 	File.open("#{bin}/../lib/msbuild.rb", "w") {|file| file.puts "MSBuild = '#{arg}'"}
+	puts 'success- modification has taken place.'
+else
+	puts 'aborted.'
 end
