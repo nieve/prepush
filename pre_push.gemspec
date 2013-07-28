@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.post_install_message = "cd to your git repository (containing the .git directory) and from there type 'prepush' to drop the prush hook into .git/hooks. \nBy default the hook will use 'C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe' to build your solutions. Use 'prepush-config path/to/your/msbuild.exe' to modify this. \nFor more information please see https://github.com/nieve/prepush"
 end

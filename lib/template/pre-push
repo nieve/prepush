@@ -11,6 +11,7 @@ class Executor
 	@solution = {sln_path} # the path to the solution to build
 	# @assemblies = {test_dlls} # insert dlls to test if different to the solution.
 	# override_msbuild 'path/to/custom/msbuild.exe'
+	# force_test_runner 'path/to/my/custom/test_runner.exe' # uncomment to use a custom test runner
 end
 
 Executor.run

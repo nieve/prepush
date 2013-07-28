@@ -6,7 +6,6 @@ require "sln_finder"
 require "args_parser"
 require "fileutils"
 
-
 parsed_args = PrePush::ArgsParser.execute(ARGV)
 runner = parsed_args[:runner]
 test_dlls = parsed_args[:test_dlls]

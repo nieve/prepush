@@ -1,4 +1,5 @@
 require "pre_push/version"
+require_relative "msbuild.rb"
 
 module PrePush
 	module ClassMethods
@@ -19,13 +20,12 @@ module PrePush
 			$?.success?
 		end
 	  def run_tests assemblies
-	  	gem_lib = File.dirname(__FILE__)
 			assemblies = assemblies || [@solution]
 			assemblies = assemblies.empty? ? [@solution] : assemblies
 			success = true
+	  	gem_lib = File.dirname(__FILE__)
 			assemblies.each do |assembly|
-				exe = runners_exes[@test_runner]
-	  		system "\"#{gem_lib}/runners/#{@test_runner}/#{exe}\" \"#{assembly}\""
+	  		system "#{test_runner_path(gem_lib)} \"#{assembly}\""
 	  		success &= $?.success?
 	  	end
 	  	success
@@ -33,11 +33,19 @@ module PrePush
 
 	  private
 	  def msbuild
-	  	'C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe'
+	  	MSBuild
+	  end
+	  def test_runner_path gem_lib
+	  	"\"#{gem_lib}/runners/#{@test_runner}/#{runners_exes[@test_runner]}\""
 	  end
 	  def override_msbuild custom_msbuild
 	  	define_singleton_method :msbuild do
 	  		custom_msbuild
+	  	end
+	  end
+	  def force_test_runner runner_path
+	  	define_singleton_method :test_runner_path do |gem_lib|
+	  		runner_path
 	  	end
 	  end
 	  def runners_exes
