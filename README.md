@@ -45,7 +45,11 @@ If you wish to override it use:
 		
 		$ prepush /msb=c:/my/path/to/MSBuild.exe
 
-You can also modify the solution, dlls & even runner on the dropped pre-push file itself.
+If you wish to modify the default msbuild path that will be used by default on all your prepush hooks use:
+		
+		$ prepush-config d:/my/path/to/MSBuild.exe
+
+You can also modify the solution, dlls & even the test runner on the dropped pre-push file itself.
 If you're using mspec, you may need to specify the dlls you wish to test in the @assemblies array variable. Failing to do so may result in the error "Could not load file or assembly 'path/to/your.sln' or one of its dependencies. The module was expected to contain an assembly manifest."
 
 ## Contributing
