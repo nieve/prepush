@@ -20,7 +20,7 @@ if PrePush::Validator.validate(runner)
 	sln_path = PrePush::SlnFinder.find || "path/to/your.sln"
 	content = file_text.gsub(/\{runner\}/, "\"#{runner}\"").gsub(/\{sln_path\}/, "\"#{sln_path}\"")
 	if test_dlls != nil
-		content = content.sub("# @assemblies = {test_dlls}", "@assemblies = #{test_dlls}")
+		content = content.sub("# @assemblies = [{test_dlls}]", "@assemblies = [#{test_dlls}]")
 	end
 	if msbuild != nil
 		content = content.sub("# override_msbuild 'path/to/custom/msbuild.exe'","override_msbuild '#{msbuild}'")

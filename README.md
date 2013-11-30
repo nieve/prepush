@@ -40,6 +40,11 @@ If you wish to specify the dlls that your test runner should run/test use:
 	
 		$ prepush /td=./path/to/some.dll,./path/to/another.dll
 
+If you wish to specify what dlls should be ran by which test runner, you'll need to add something like the following to you pre-push hook:
+	
+		@tests_to_run = {mspec0515: ["./path/to/mspec/tests.dll"], nunit262: ["./path/to/nunit/tests1.dll", "./path/to/nunit/tests2.dll"]}
+**This will override anything you may have assigned to @assemblies!**
+
 The default msbuild path used is C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe.
 If you wish to override it use:
 		

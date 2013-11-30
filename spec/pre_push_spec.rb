@@ -11,6 +11,11 @@ class EmptyDllsDummy
 	include PrePush
 end
 
+class MultiTesterDummy
+	@tests_to_run = {mspec0515: ["./path/to/mspec/tests.dll"], nunit262: ["./path/to/nunit/tests1.dll", "./path/to/nunit/tests2.dll"]}
+	include PrePush
+end
+
 class DummyCustomMSBuild < Dummy
 	override_msbuild 'path/to/custom/msbuild.exe'
 end
@@ -47,6 +52,12 @@ describe PrePush do
 		it "should use custom test runner when specified" do
 			DummyCustomTestRunner.should_receive("system").with(/^path\/to\/my\/custom\/test_runner.exe/)
 			DummyCustomTestRunner.run_tests(['some_test_proj.csproj'])
+		end
+		it "should use specified test runner on specified test dlls when using tests_to_run" do
+			MultiTesterDummy.should_receive("system").with(/mspec-clr4.exe\" \".\/path\/to\/mspec\/tests.dll\"$/)
+			MultiTesterDummy.should_receive("system").with(/nunit-console.exe\" \".\/path\/to\/nunit\/tests1.dll\"$/)
+			MultiTesterDummy.should_receive("system").with(/nunit-console.exe\" \".\/path\/to\/nunit\/tests2.dll\"$/)
+			MultiTesterDummy.run_tests(nil)
 		end
 		describe 'when assemblies are left empty' do
 			it 'should call system to run tests on solution' do

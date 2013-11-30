@@ -20,14 +20,16 @@ module PrePush
 			$?.success?
 		end
 	  def run_tests assemblies
-			assemblies = assemblies || [@solution]
-			assemblies = assemblies.empty? ? [@solution] : assemblies
+			assemblies = assemblies.to_a.empty? ? [@solution] : assemblies
 			success = true
 	  	gem_lib = File.dirname(__FILE__)
-			assemblies.each do |assembly|
-	  		system "#{test_runner_path(gem_lib)} \"#{assembly}\""
-	  		success &= $?.success?
-	  	end
+	  	tests_to_run = @tests_to_run || {@test_runner => assemblies}
+	  	tests_to_run.each_pair do |test_to_run|
+				test_to_run[1].each do |assembly|
+		  		system "#{test_runner_path(gem_lib, test_to_run[0])} \"#{assembly}\""
+		  		success &= $?.success?
+		  	end
+		  end
 	  	success
 	  end
 
@@ -35,8 +37,9 @@ module PrePush
 	  def msbuild
 	  	MSBuild
 	  end
-	  def test_runner_path gem_lib
-	  	"\"#{gem_lib}/runners/#{@test_runner}/#{runners_exes[@test_runner]}\""
+	  def test_runner_path gem_lib, test_runner
+	  	test_runner = test_runner.to_s
+	  	"\"#{gem_lib}/runners/#{test_runner}/#{runners_exes[test_runner]}\""
 	  end
 	  def override_msbuild custom_msbuild
 	  	define_singleton_method :msbuild do
@@ -44,7 +47,7 @@ module PrePush
 	  	end
 	  end
 	  def force_test_runner runner_path
-	  	define_singleton_method :test_runner_path do |gem_lib|
+	  	define_singleton_method :test_runner_path do |gem_lib, nothing|
 	  		runner_path
 	  	end
 	  end

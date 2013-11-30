@@ -9,7 +9,8 @@ class Executor
 	###
 
 	@solution = {sln_path} # the path to the solution to build
-	# @assemblies = {test_dlls} # insert dlls to test if different to the solution.
+	# @assemblies = [{test_dlls}] # insert dlls to test if different to the solution.
+	# @tests_to_run = {xunit191: ["./path/to/xunit/tests.dll"], nunit262: ["./path/to/nunit/tests1.dll", "./path/to/nunit/tests2.dll"]}
 	# override_msbuild 'path/to/custom/msbuild.exe'
 	# force_test_runner 'path/to/my/custom/test_runner.exe' # uncomment to use a custom test runner
 end
