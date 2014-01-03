@@ -57,6 +57,7 @@ module PrePush
 				'mspec0515' => 'mspec-clr4.exe',
 				'mspec0512' => 'mspec-clr4.exe',
 				'nunit262' => 'nunit-console.exe',
+				'nunit263' => 'nunit-console.exe',
 				'xunit191' => 'xunit.console.exe'
 			}
 	  end

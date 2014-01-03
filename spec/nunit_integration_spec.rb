@@ -3,7 +3,7 @@ require 'spec_helper'
 class NunitRunnerTester
 	@solution = "spec/TestProj/TestProj.sln"
 	@assemblies = ["spec/TestProj/TestProj/TestProj.csproj"]
-	@test_runner = 'nunit262'
+	@test_runner = 'nunit263'
 	#@runner_exe = 'nunit-console.exe' # will be selected by default
 	include PrePush
 end
