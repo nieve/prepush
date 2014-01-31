@@ -16,11 +16,13 @@ module PrePush
 			end
 		end
 		def build
-			system "#{msbuild} #{@solution}"
+			@solution.to_a.each do |s|
+				system "#{msbuild} #{s}"
+			end
 			$?.success?
 		end
 	  def run_tests assemblies
-			assemblies = assemblies.to_a.empty? ? [@solution] : assemblies
+			assemblies = assemblies.to_a.empty? ? @solution.to_a : assemblies
 			success = true
 	  	gem_lib = File.dirname(__FILE__)
 	  	tests_to_run = @tests_to_run || {@test_runner => assemblies}
@@ -66,5 +68,11 @@ module PrePush
 	def self.included(receiver)
 		receiver.extend         ClassMethods
 		#receiver.send :include, InstanceMethods
+	end
+end
+
+class String
+	def to_a
+		[self]
 	end
 end

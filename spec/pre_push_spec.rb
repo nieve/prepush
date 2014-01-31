@@ -18,6 +18,11 @@ end
 
 class DummyCustomMSBuild < Dummy
 	override_msbuild 'path/to/custom/msbuild.exe'
+	@solution = 'some/solution.sln'
+end
+
+class DummyMultipleSolutions < Dummy
+	@solution = ["path/to/solution1.sln","path/to/solution2.sln"]
 end
 
 class DummyCustomTestRunner < Dummy
@@ -40,8 +45,13 @@ describe PrePush do
 			Dummy.build
 		end
 		it "should use custom msbuild when specified" do
-			DummyCustomMSBuild.should_receive("system").with(/^path\/to\/custom\/msbuild.exe/)
+			DummyCustomMSBuild.should_receive("system").with(/^path\/to\/custom\/msbuild.exe some\/solution.sln/)
 			DummyCustomMSBuild.build
+		end
+		it "should build all solutions specified" do
+			DummyMultipleSolutions.should_receive("system").with(/path\/to\/solution1.sln/)
+			DummyMultipleSolutions.should_receive("system").with(/path\/to\/solution2.sln/)
+			DummyMultipleSolutions.build
 		end
 	end
 	describe 'run_tests' do
