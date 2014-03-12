@@ -18,43 +18,44 @@ module PrePush
 		def build
 			@solution.to_a.each do |s|
 				system "#{msbuild} #{s}"
+				return false if !$?.success?
 			end
 			$?.success?
 		end
-	  def run_tests assemblies
+		def run_tests assemblies
 			assemblies = assemblies.to_a.empty? ? @solution.to_a : assemblies
 			success = true
-	  	gem_lib = File.dirname(__FILE__)
-	  	tests_to_run = @tests_to_run || {@test_runner => assemblies}
-	  	tests_to_run.each_pair do |test_to_run|
+			gem_lib = File.dirname(__FILE__)
+			tests_to_run = @tests_to_run || {@test_runner => assemblies}
+			tests_to_run.each_pair do |test_to_run|
 				test_to_run[1].each do |assembly|
-		  		system "#{test_runner_path(gem_lib, test_to_run[0])} \"#{assembly}\""
-		  		success &= $?.success?
-		  	end
-		  end
-	  	success
-	  end
+					system "#{test_runner_path(gem_lib, test_to_run[0])} \"#{assembly}\""
+					success &= $?.success?
+				end
+			end
+			success
+		end
 
-	  private
-	  def msbuild
-	  	MSBuild
-	  end
-	  def test_runner_path gem_lib, test_runner
-	  	test_runner = test_runner.to_s
-	  	"\"#{gem_lib}/runners/#{test_runner}/#{runners_exes[test_runner]}\""
-	  end
-	  def override_msbuild custom_msbuild
-	  	define_singleton_method :msbuild do
-	  		custom_msbuild
-	  	end
-	  end
-	  def force_test_runner runner_path
-	  	define_singleton_method :test_runner_path do |gem_lib, nothing|
-	  		runner_path
-	  	end
-	  end
-	  def runners_exes
-	  	{
+		private
+		def msbuild
+			MSBuild
+		end
+		def test_runner_path gem_lib, test_runner
+			test_runner = test_runner.to_s
+			"\"#{gem_lib}/runners/#{test_runner}/#{runners_exes[test_runner]}\""
+		end
+		def override_msbuild custom_msbuild
+			define_singleton_method :msbuild do
+				custom_msbuild
+			end
+		end
+		def force_test_runner runner_path
+			define_singleton_method :test_runner_path do |gem_lib, nothing|
+				runner_path
+			end
+		end
+		def runners_exes
+			{
 				'mspec' => 'mspec-clr4.exe',
 				'mspec0515' => 'mspec-clr4.exe',
 				'mspec0512' => 'mspec-clr4.exe',
@@ -62,7 +63,7 @@ module PrePush
 				'nunit263' => 'nunit-console.exe',
 				'xunit191' => 'xunit.console.exe'
 			}
-	  end
+		end
 	end
 
 	def self.included(receiver)
