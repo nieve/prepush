@@ -31,11 +31,15 @@ The hook contains the following fields which you will need to specify:
     @test_runner = 'nunit262' #will tell the prepush hook to use nunit 2.6.2 runner
     @solution = [path/to/sln1.sln, path/to/sln2.sln] # the paths to the solutions to build
     @assemblies = [test_dlls] # insert dlls to test if different to the solution.
-    @tests_to_run = {xunit191: ["./path/to/xunit/tests.dll"], nunit262: ["./path/to/nunit/tests1.dll", "./path/to/nunit/tests2.dll"]} **This will override anything you may have assigned to @assemblies!**
+    @tests_to_run = {xunit191: ["./path/to/xunit/tests.dll"], nunit262: ["./path/to/nunit/tests1.dll", "./path/to/nunit/tests2.dll"]}
     override_msbuild 'path/to/custom/msbuild.exe'
     force_test_runner 'path/to/my/custom/test_runner.exe' # uncomment to use a custom test runner
 
+ **Assigning the @tests_to_run attr will override anything you may have assigned to @assemblies!**
+
 By default, the pre-push hook will use the first .sln file it finds.
+
+## Command line arguments
 
 You could use the following command line arguments as follow, however editing the file would be much easier to control.
 (These would probably get deprecated)
