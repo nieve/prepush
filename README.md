@@ -20,14 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-After installing the gem, cd to the git repository you wish to add the hook to 
-(the directory containing a .git dir) and from there use one of the following:
+After installing the gem,open the command line and cd to the git repository you wish to add the hook to 
+(the directory containing a .git dir) and from there type:
 	
 		$ prepush
-		$ prepush /r=mspec
-		$ prepush /r=xunit191
 
-the first will use nunit (2.6.2) for running your tests.
+This will drop a pre-push hook into the git hooks directory.
+The hook contains the following fields which you will need to specify:
+	$ @test_runner = 'nunit262' #will tell the prepush hook to use nunit 2.6.2 runner
+	$ @solution = [path/to/sln1.sln, path/to/sln2.sln] # the paths to the solutions to build
+	$ @assemblies = [test_dlls] # insert dlls to test if different to the solution.
 By default, the pre-push hook will use the first .sln file it finds.
 
 The arguments accepted are:
